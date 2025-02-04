@@ -1,6 +1,6 @@
 # TODO Application
 
-This is a simple TODO-application craeted with Node.js, MongoDB, Vite, Vue 3, Tailwind.
+This is a simple TODO-application craeted with Node.js, MongoDB, Vite, Vue 3, Tailwind and Docker.
 
 The purpose of the application is to track progress of TODO:s.
 

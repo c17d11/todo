@@ -6,6 +6,15 @@ The purpose of the application is to track progress of TODO:s.
 
 ![](doc/images/web-gui.png)
 
+**Only tested with Ubuntu**
+
+
+# Installation
+Dependencies have to be installed manually. E.g. for Ubuntu:
+```
+sudo snap install docker
+```
+
 
 # Launch
 To launch the application run the script:

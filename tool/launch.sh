@@ -4,7 +4,7 @@ echo "Runnning Todo application...";
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}")/.." &> /dev/null && pwd )
 
 main() (
-    docker-compose up > /dev/null 2>&1 &
+    sudo docker-compose up > /dev/null 2>&1 &
 
     ready=$(curl -sI http://localhost:3000 | grep "200 OK" | wc -l)
     while [[ "$ready" != 1 ]]

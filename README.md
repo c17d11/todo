@@ -4,6 +4,8 @@ This is a simple TODO-application craeted with Node.js, MongoDB, Vite, Vue 3, Ta
 
 The purpose of the application is to track progress of TODO:s.
 
+![](doc/images/web-gui.png)
+
 
 # Launch
 To launch the application run the script:

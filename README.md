@@ -14,6 +14,7 @@ Dependencies have to be installed manually. E.g. for Ubuntu:
 ```
 sudo snap install docker
 ```
+Install Google Chrome (or open localhost:3000 manually in other browser).
 
 
 # Launch

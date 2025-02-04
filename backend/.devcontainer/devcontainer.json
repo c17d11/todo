@@ -1,0 +1,11 @@
+{
+	"name": "Todos: Backend",
+	"dockerComposeFile" : "../../dev-compose.yml",
+	"service" : "backend",
+	"workspaceFolder": "/workspace",
+	"extensions": [
+		"eamodio.gitlens",
+		"rangav.vscode-thunder-client",
+		"dbaeumer.vscode-eslint"
+	]	
+}

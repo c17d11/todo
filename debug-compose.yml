@@ -1,0 +1,43 @@
+version: '3.2'
+
+services:
+  web:
+    build:
+      context: web
+      dockerfile: dockerfiles/Dockerfile.prod.debug
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - BACKEND_URL=http://backend:3000
+    volumes:
+      - type: bind
+        source: ./web/.vscode
+        target: /app/.vscode
+        read_only: true
+    command: sleep infinity
+
+  backend:
+    build:
+      context: backend
+      dockerfile: dockerfiles/Dockerfile.prod.debug
+    ports:
+      - "3001:3000"
+    environment:
+      - PORT=3000
+      - DATABASE_URL=database:27017
+    volumes:
+      - type: bind
+        source: ./backend/.vscode
+        target: /app/.vscode
+        read_only: true
+    command: sleep infinity
+
+  database:
+    image: mongo:latest
+    restart: unless-stopped
+    volumes:
+      - mongo:/data/db
+
+volumes:
+  mongo:

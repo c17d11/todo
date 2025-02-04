@@ -1,0 +1,52 @@
+version: '3.2'
+
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.dev
+    # ports:
+      # - "3000:8080"
+    environment:
+      - WEB_PORT=8080
+      - BACKEND_PORT=8000
+      - BACKEND_URL=localhost:8000
+      - DATABASE_URL=database:27017
+    volumes:
+      - .:/workspace
+    command: sleep infinity
+  # web:
+  #   build:
+  #     context: web
+  #     dockerfile: dockerfiles/Dockerfile.dev
+  #   ports:
+  #     - "3000:8080"
+  #   environment:
+  #     - PORT=8080
+  #     - BACKEND_URL=http://backend:8080
+  #   volumes:
+  #     - ./web/dev:/workspace
+  #     - ./web/public:/public
+  #   command: sleep infinity
+
+  # backend:
+  #   build:
+  #     context: backend
+  #     dockerfile: dockerfiles/Dockerfile.dev
+  #   expose:
+  #     - "8080"
+  #   environment:
+  #     - PORT=8080
+  #     - DATABASE_URL=database:27017
+  #   volumes:
+  #     - ./backend:/workspace
+  #   command: sleep infinity
+
+  database:
+    image: mongo:latest
+    restart: unless-stopped
+    volumes:
+      - mongo:/data/db
+
+volumes:
+  mongo:

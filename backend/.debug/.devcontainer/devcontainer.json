@@ -1,0 +1,11 @@
+{
+	"name": "Backend: Debug",
+	"dockerComposeFile" : "../../../debug-compose.yml",
+	"service" : "backend",
+	"workspaceFolder": "/app",
+	"extensions": [
+		"eamodio.gitlens",
+		"rangav.vscode-thunder-client",
+		"dbaeumer.vscode-eslint"
+	]	
+}

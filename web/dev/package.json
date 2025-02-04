@@ -1,0 +1,27 @@
+{
+  "name": "todos",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vicons/ionicons5": "^0.12.0",
+    "@vicons/material": "^0.12.0",
+    "@vitejs/plugin-vue": "^2.3.0",
+    "autoprefixer": "^10.4.4",
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "http": "^0.0.1-security",
+    "inspect-brk": "^0.1.2",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.24",
+    "vite": "^2.9.0",
+    "vue-router": "^4.0.14"
+  }
+}

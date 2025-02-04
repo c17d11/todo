@@ -1,0 +1,33 @@
+version: '3.2'
+
+services:
+  web:
+    build:
+      context: web
+      dockerfile: dockerfiles/Dockerfile.prod
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - BACKEND_URL=http://backend:3000
+    restart: unless-stopped
+    command: npm start
+
+  backend:
+    build:
+      context: backend
+      dockerfile: dockerfiles/Dockerfile.prod
+    environment:
+      - BACKEND_PORT=3000
+      - DATABASE_URL=database:27017
+    restart: unless-stopped
+    command: npm start
+
+  database:
+    image: mongo:latest
+    restart: unless-stopped
+    volumes:
+      - mongo:/data/db
+
+volumes:
+  mongo:

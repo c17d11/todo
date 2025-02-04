@@ -1,0 +1,13 @@
+{
+	"name": "Todos",
+	"dockerComposeFile" : "../dev-compose.yml",
+	"service" : "workspace",
+	"workspaceFolder": "/workspace",
+	"extensions": [
+		"eamodio.gitlens",
+		"rangav.vscode-thunder-client",
+		"dbaeumer.vscode-eslint",
+		"octref.vetur",
+		"johnsoncodehk.volar"
+	]	
+}
